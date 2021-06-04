@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.container {
+  position: absolute;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background-color: lightgreen;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+BODY{
+BACKGROUND-IMAGE:URL('93729.jpg');
+BACKGROUND-REPEAT:NO REPEAT;
+BACKGROUND-ATTACHMENT:FIXED;
+BACKGROUND-SIZE:100%100%
+}
+
+
+#myHeader {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style all elements with the class name "city" */
+.city {
+  background-color: tomato;
+  color: white;
+  padding: 10px;
+} 
+
+
+
+</style>
+</head>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="tof1.jpeg" alt="Think of IT" style="width:1000px;height:400px;" >
+   <div class="text-block">
+    <h3>LET'S THINK OF IT!</h3>
+    <p>Be the part of the largest community of youth challangemakers.<br>Get your voice heard.Lead the change for an impact.Channelize dreams and<br>steer young minds with "YOUTH LEADERSHIP" to create an impact by taking<br> the road less travelled.</p>
+    <h3>MAKE YOUR CITY COUNT</h3>
+    <p>Tunelare by the present and let the fire of the youth in your city burst into a<br>spectacular flare by registring your city chapter.<br></p> 
+</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+<img src="tof2.jpeg" alt="Think of IT" style="width:1000px;height:400px;" >
+   <div class="text-block">
+    <h3>LET'S THINK OF IT!</h3>
+    <p>Be the part of the largest community of youth challangemakers.<br>Get your voice heard.Lead the change for an impact.Channelize dreams and<br>steer young minds with "YOUTH LEADERSHIP" to create an impact by taking<br> the road less travelled.</p>
+    <h3>MAKE YOUR CITY COUNT</h3>
+    <p>Tunelare by the present and let the fire of the youth in your city burst into a<br>spectacular flare by registring your city chapter.<br></p> 
+</div>
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div><img src="tof3.jpeg" alt="Think of IT" style="width:1000px;height:400px;" >
+   <div class="text-block">
+    <h3>LET'S THINK OF IT!</h3>
+    <p>Be the part of the largest community of youth challangemakers.<br>Get your voice heard.Lead the change for an impact.Channelize dreams and<br>steer young minds with "YOUTH LEADERSHIP" to create an impact by taking<br> the road less travelled.</p>
+    <h3>MAKE YOUR CITY COUNT</h3>
+    <p>Tunelare by the present and let the fire of the youth in your city burst into a<br>spectacular flare by registring your city chapter.<br></p> 
+</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<h2>Think of it Foundation (TOFI)</h2>
+<p>Connecting youth for thought leadership via TOFI-Youth Leadership Council By the Youth | For the Youth </p>
+
+<!-- An element with a unique id -->
+<h1 id="myHeader"><marquee behavior="slide" direction="left">
+<img src="tof4.png" width="125" height="82">
+<img src="tof6.jpeg" width="125" height="82">
+<img src="tof5.jpeg" width="125" height="82">
+<img src="tof7.png" width="125" height="82">
+<img src="logo.png" width="125" height="82">
+</marquee></h1>
+
+<!-- Multiple elements with same class -->
+<h2 class="city">REACH TO TEACH</h2>
+<p>REACH TO TEACH
+It’s high time that the suppressed talents get uplifted, education be skill-enriched and young crops get nurtured, aligned with their regular curriculum.
+TOI attempts to promote holistic development and provide formative skill-development modules and opportunities.<br>
+Our fellows encourage the kids to:<br></p>
+<ul>
+  <li> Focus on their interest domain.</li>
+  <li>Experience hands-on and seek to provide them with the right exposure.</li>
+  <li>Create a sustainable global impact.</li>
+</ul>
+
+
+<h2 class="city">RAISE A DREAM</h2>
+<p>Join hands and help TOI to Raise a Dream of impoverished talented children by providing them the access to your platform/network and with continuous assistance from our fellows. Help TOI raise a million dreams.</p>
+<ul>
+  <li>Mentor a dream.</li>
+  <li>Help the talented to showcase their skills.</li>
+  <li> Transit them with your platform, connect dreams with reality.</li>
+  <li>Refine the talent with your guidance and support.</li>
+  <li>Complete your social responsibility.</li>
+  <li>TOI will be pleased to associate with NGO’s, corporates, artists, institutions,academies, start-ups, professionals, businesses and others.</li>
+</ul>
+<center>
+<button><img src="tof14.png" width="350" height="230" style="border:5px solid black"></button>
+<h2>ENROLL</h2>
+<p>Register yourself to be the greatest change-maker who contributes towards social responsibility.</p><br>
+<button><img src="tof13.png" width="350" height="230" style="border:5px solid black"></button>
+<h2>EVALUATE</h2>
+<p>Think of the current issues that are blockers to the objectives and hurdles to the overall development</p><br>
+<button><img src="tof11.png" width="350" height="230" style="border:5px solid black"></button>
+<h2>ENGAGE</h2>
+<p>Youth is the best solution for the problems. Engage yourself to think through it and eliminate the hurdles assessed.</p>
+<button><img src="tof12.png" width="350" height="230" style="border:5px solid black"></button>
+<h2>ELEVATE</h2>
+<p>When you are into it, know how to act and handle it. Just feel the drive, be a touchstone to drive others!</p>
+</center>
+</body>
+</html>
+
